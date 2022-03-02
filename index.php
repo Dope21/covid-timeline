@@ -69,8 +69,7 @@
                         <tr>
                             <th>ลำดับ</th>
                             <th>สถานที่</th>
-                            <th>เวลา-เข้า</th>
-                            <th>เวลา-ออก</th>
+                            <th>เวลา</th>
                             <th>อุณหภูมิ</th>
                             <th>วันที่</th>
                         </tr>
@@ -79,9 +78,7 @@
                     <?php
                         $sql = "SELECT * 
                                 FROM user_info 
-                                INNER JOIN user_out
-                                    ON user_info.info_id = user_out.info_id
-                                WHERE '$_userID' = user_info.id_card";
+                                WHERE '$_userID' = id_card";
                         $_SESSION['sql'] = $sql;
                         $result = mysqli_query($conn, $sql);
                         $num = 0;
@@ -130,7 +127,6 @@
                             <td><?php echo $num; ?></td>
                             <td><?php echo $rowInfo['location']; ?></td>
                             <td><?php echo $rowInfo['time']; ?></td>
-                            <td><?php echo $rowInfo['out']; ?></td>
                             <td><?php echo $rowInfo['temp']; ?></td>
                             <td><?php echo $dateTh; ?></td>
                         </tr>

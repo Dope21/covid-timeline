@@ -19,34 +19,28 @@ $_select_1 = $_POST['date'];
 $_select_2 = $_POST['date_2'];
 /*=========================================== QUERY FUNCTION ===========================================*/
 if($_SESSION['id']=='admin'){
-    
+    // echo $_location;
         // SEARCH LOCATION ONLY
-        if ($_select_2 == '0' && $_select_1 == '0'){
+        if ($_select_2 == '' && $_select_1 == ''){
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE '$_location' = user_info.location 
-                    ORDER BY user_info.date desc";
+                    WHERE '$_location' = location 
+                    ORDER BY date desc";
         }
     
-        if ($_select_2 == '0' && $_select_1 != '0'){
+        if ($_select_2 == '' && $_select_1 != ''){
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE '$_select_1' = user_info.date 
-                    AND '$_location' = user_info.location";
+                    WHERE '$_select_1' = date 
+                    AND '$_location' = location";
         }
     
-        if ($_select_2 != '0' && $_select_1 != '0') {
+        if ($_select_2 != '' && $_select_1 != '') {
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE user_info.date >= '$_select_1' 
-                    AND user_info.date <= '$_select_2' 
-                    AND '$_location' = user_info.location";
+                    WHERE date >= '$_select_1' 
+                    AND date <= '$_select_2' 
+                    AND '$_location' = location";
         }
     
     //IF USER HIT THE CLEAR BUTTON
@@ -54,10 +48,8 @@ if($_SESSION['id']=='admin'){
     {   
         $sql = "SELECT * 
                 FROM user_info 
-                INNER JOIN user_out
-                    ON user_info.info_id = user_out.info_id
-                WHERE '$session_id' = user_info.id_card 
-                ORDER BY user_info.date desc";
+                WHERE '$session_id' = id_card 
+                ORDER BY date desc";
     }
 
 } else {
@@ -66,33 +58,27 @@ if($_SESSION['id']=='admin'){
         if ($_select_2 == '' && $_select_1 == ''){
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE '$_location' = user_info.location 
-                    AND '$session_id' = user_info.id_card 
-                    ORDER BY user_info.date desc";
+                    WHERE '$_location' = location 
+                    AND '$session_id' = id_card 
+                    ORDER BY date desc";
         }
     
         if ($_select_2 == '' && $_select_1 != ''){
 
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info.id = user_out.info_id
-                    WHERE '$_select_1' = user_info.date 
-                    AND '$_location' = user_info.location 
-                    AND '$session_id' = user_info.id_card ORDER BY user_info.date desc";
+                    WHERE '$_select_1' = date 
+                    AND '$_location' = location 
+                    AND '$session_id' = id_card ORDER BY date desc";
         }
     
         if ($_select_2 != '' && $_select_1 != '') {
 
             $sql = "SELECT * 
                     FROM user_info
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE user_info.date >= '$_select_1' AND user_info.date <= '$_select_2' 
-                    AND '$_location' = user_info.location
-                    AND '$session_id' = user_info.id_card ORDER BY user_info.date desc";
+                    WHERE date >= '$_select_1' AND date <= '$_select_2' 
+                    AND '$_location' = location
+                    AND '$session_id' = id_card ORDER BY date desc";
         }
     
     } else {
@@ -102,23 +88,19 @@ if($_SESSION['id']=='admin'){
 
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE '$session_id' = user_info.id_card
-                    AND '$_select_1' = user_info.date
-                    ORDER BY user_info.date DESC";
+                    WHERE '$session_id' = id_card
+                    AND '$_select_1' = date
+                    ORDER BY date DESC";
         } 
         //SEARCH BETWEEN TWO DAYS
         else if ($_select_2 != '' && $_select_1 != '') {
 
             $sql = "SELECT * 
                     FROM user_info 
-                    INNER JOIN user_out
-                        ON user_info.info_id = user_out.info_id
-                    WHERE '$session_id' = user_info.id_card
-                    AND user_info.date >= '$_select_1'
-                    AND user_info.date <= '$_select_2'
-                    ORDER BY user_info.date DESC";
+                    WHERE '$session_id' = id_card
+                    AND date >= '$_select_1'
+                    AND date <= '$_select_2'
+                    ORDER BY date DESC";
         }
     }
     //IF USER HIT THE CLEAR BUTTON
@@ -126,9 +108,7 @@ if($_SESSION['id']=='admin'){
     {   
         $sql = "SELECT * 
                 FROM user_info 
-                INNER JOIN user_out
-                    ON user_info.info_id = user_out.info_id
-                WHERE '$session_id' = user_info.id_card";
+                WHERE '$session_id' = id_card";
     }
 }
 
@@ -215,8 +195,7 @@ $num = 0;
             <tr>
                 <th>ลำดับ</th>
                 <th>สถานที่</th>
-                <th>เวลา-เข้า</th>
-                <th>เวลา-ออก</th>
+                <th>เวลา</th>
                 <th>อุณหภูมิ</th>
                 <th>วันที่</th>
             </tr>
@@ -266,7 +245,6 @@ $num = 0;
                 <td><?php echo $num; ?></td>
                 <td><?php echo $rowInfo['location']; ?></td>
                 <td><?php echo $rowInfo['time']; ?></td>
-                <td><?php echo $rowInfo['out']; ?></td>
                 <td><?php echo $rowInfo['temp']; ?></td>
                 <td><?php echo $dateTh; ?></td>
             </tr>

@@ -40,59 +40,11 @@
                     <input type="text" placeholder="สถานที่" id="location">
                 </div>
                 <div class="timeline__date-1">
-                    <select name="search_date" id="searchDate">
-                        <option value="0">วัน</option> 
-                    </select>
-                    <select name="search_month" id="searchMonth">
-                        <option value="0">เดือน</option>
-                        <option value="01">มกราคม</option>
-                        <option value="02">กุมภาพันธ์</option>
-                        <option value="03">มีนาคม</option>
-                        <option value="04">เมษายน</option>
-                        <option value="05">พฤษภาคม</option>
-                        <option value="06">มิถุนายน</option>
-                        <option value="07">กรกฎาคม</option>
-                        <option value="08">สิงหาคม</option>
-                        <option value="09">กันยายน</option>
-                        <option value="10">ตุลาคม</option>
-                        <option value="11">พฤศจิกายน</option>
-                        <option value="12">ธันวาคม</option>
-                    </select>
-                    <select name="search_year" id="searchYear">
-                        <option value="2021">2564</option>
-                        <option value="2022">2565</option>
-                        <option value="2023">2566</option>
-                        <option value="2024">2567</option>
-                        <option value="2025">2568</option>
-                    </select>
+                    <input type="date" id="date-1">
                 </div>
                 <span>ถึง</span>
                 <div class="timeline__date-2">
-                    <select name="search_date-2" id="searchDate-2">
-                        <option value="0">วัน</option> 
-                    </select>
-                    <select name="search_month-2" id="searchMonth-2">
-                        <option value="0">เดือน</option>
-                        <option value="01">มกราคม</option>
-                        <option value="02">กุมภาพันธ์</option>
-                        <option value="03">มีนาคม</option>
-                        <option value="04">เมษายน</option>
-                        <option value="05">พฤษภาคม</option>
-                        <option value="06">มิถุนายน</option>
-                        <option value="07">กรกฎาคม</option>
-                        <option value="08">สิงหาคม</option>
-                        <option value="09">กันยายน</option>
-                        <option value="10">ตุลาคม</option>
-                        <option value="11">พฤศจิกายน</option>
-                        <option value="12">ธันวาคม</option>
-                    </select>
-                    <select name="search_year-2" id="searchYear-2">
-                        <option value="2021">2564</option>
-                        <option value="2022">2565</option>
-                        <option value="2023">2566</option>
-                        <option value="2024">2567</option>
-                        <option value="2025">2568</option>
-                    </select>
+                    <input type="date" id="date-2">
                 </div>
             </div>
             <div class="timeline__submit">
