@@ -1,0 +1,183 @@
+.timeline__container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    // height: 100vh;
+}
+
+.timeline{
+    padding: 4rem 6.25rem;
+    max-width: 1024px;
+    width: 1024px;
+    
+    
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $text-1;
+        font-family: $font-2;
+        font-weight: 600;
+    }
+
+    &__name{
+        font-size: 2.25rem;
+    }
+
+    &__id{
+        font-size: 2.25rem;
+    }
+
+    &__filter{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.5rem;
+
+        span{
+            font-family: $font-2;
+            font-size: 18px;
+            margin: auto 0;
+            opacity: 60%;
+        }
+    }
+
+    // &__location,
+    // &__date-1,
+    // &__date-2{
+    //     width: 100%;
+    // }
+
+    &__location{
+        input{
+            width: 237px;
+            height: 40px;
+            font-size: 18px;
+            font-family: $font-2;
+            padding-left: 10px;
+        }
+    }
+
+    &__date-1,
+    &__date-2{
+        width: 237px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        padding: 0 10px;
+
+        input{
+            width: 100%;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-family: $font-2;
+
+        }
+    }
+
+    &__submit{
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__search{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__button{
+        background: $button-bg-2;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $font-2;
+        padding: .8em 2.1em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover{
+            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.247);
+        }
+    }
+
+    &__excel{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &-info{
+            font-size: 18px;
+            color: $text-1;
+            font-weight: 600;
+            font-family: $font-2;
+        }
+    }
+  
+    &__table {
+        margin-top: 3rem;
+    }
+    
+
+}
+
+//dataTable
+.dataTables_wrapper {
+    font-family: $font-2;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    border: none;
+    border-radius: 20px;
+    background: $button-bg-2;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    color: #fff !important;
+    border: none;
+    border-radius: 20px;
+    background: $button-bg-2;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    color: #fff;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+table.dataTable thead th {
+    border-bottom: 0;
+  }
+
+tbody{
+    text-align: center;
+}
+
+table.dataTable{
+    background: rgba(255, 255, 255, 0.397);
+    border-radius: 10px;
+    padding: 1rem 0;
+    border: 1px solid black;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+    color: $text-1;
+    font-size: 18px;
+}
+
+div#myTable_length {
+    margin-bottom: 1rem;
+}
+
+div#myTable_paginate {
+    margin-top: 1rem;
+}

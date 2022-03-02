@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a, ul, li {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #FFF8EE;
+}
+
+.login__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.login {
+  padding: 3.5rem 4.5rem;
+  text-align: center;
+  color: #2C7A7B;
+}
+
+.login__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+
+.login__subtitle {
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif;
+}
+
+.login__subtitle span {
+  display: block;
+}
+
+.login__input {
+  margin: 5rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Kanit", sans-serif;
+}
+
+.login__input-info {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2.25rem;
+}
+
+.login__input-wrapper {
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.397);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.login__input-box {
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+}
+
+.login__button {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  padding: .5em 2.25em;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: #2C7A7B;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.login__button:hover {
+  -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.247);
+          box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.247);
+}
+
+.slide {
+  max-width: 745px;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+}
+
+.timeline__container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timeline {
+  padding: 4rem 6.25rem;
+  max-width: 1024px;
+  width: 1024px;
+}
+
+.timeline__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2C7A7B;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+}
+
+.timeline__name {
+  font-size: 2.25rem;
+}
+
+.timeline__id {
+  font-size: 2.25rem;
+}
+
+.timeline__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3.5rem;
+}
+
+.timeline__filter span {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  margin: auto 0;
+  opacity: 60%;
+}
+
+.timeline__location input {
+  width: 237px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Kanit", sans-serif;
+  padding-left: 10px;
+}
+
+.timeline__date-1, .timeline__date-2 {
+  width: 237px;
+  height: 40px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  padding: 0 10px;
+}
+
+.timeline__date-1 input, .timeline__date-2 input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-family: "Kanit", sans-serif;
+}
+
+.timeline__submit {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timeline__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.timeline__button {
+  background: #A200EE;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Kanit", sans-serif;
+  padding: .8em 2.1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.timeline__button:hover {
+  -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.247);
+          box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.247);
+}
+
+.timeline__excel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.timeline__excel-info {
+  font-size: 18px;
+  color: #2C7A7B;
+  font-weight: 600;
+  font-family: "Kanit", sans-serif;
+}
+
+.timeline__table {
+  margin-top: 3rem;
+}
+
+.dataTables_wrapper {
+  font-family: "Kanit", sans-serif;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: #fff !important;
+  border: none;
+  border-radius: 20px;
+  background: #A200EE;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #fff !important;
+  border: none;
+  border-radius: 20px;
+  background: #A200EE;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fff;
+}
+
+table.dataTable tbody tr {
+  background-color: transparent;
+}
+
+table.dataTable thead th {
+  border-bottom: 0;
+}
+
+tbody {
+  text-align: center;
+}
+
+table.dataTable {
+  background: rgba(255, 255, 255, 0.397);
+  border-radius: 10px;
+  padding: 1rem 0;
+  border: 1px solid black;
+}
+
+table.dataTable thead th, table.dataTable tfoot th {
+  color: #2C7A7B;
+  font-size: 18px;
+}
+
+div#myTable_length {
+  margin-bottom: 1rem;
+}
+
+div#myTable_paginate {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
